@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="codeGenerator" name="Code Generator" schema="schema/codeGenerator.exsd"/>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://www.rowlo.de/testgenerator/testdsl/TestDSL"
+			class = "de.rowlo.testgenerator.testdsl.testDSL.TestDSLPackage"
+			genModel = "model/generated/TestDSL.genmodel" />
+	</extension>
+</plugin>

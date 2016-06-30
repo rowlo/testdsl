@@ -1,0 +1,9 @@
+*.class
+*.o
+*/bin
+*/.svn
+.directory
+*/src-gen
+*/xtend-gen
+*/model/generated
+*.xml_gen

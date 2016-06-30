@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="unitTestGeneratorProduct"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            description="Editor and generator for unit tests focussing on test data"
+            name="Unit Test Generator">
+         <property
+               name="appName"
+               value="Unit Test Generator">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/app16.png,icons/app32.png,icons/app48.png,icons/app64.png,icons/app128.png,icons/app256.png">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/app32.png">
+         </property>
+         <property
+               name="aboutText"
+               value="Editor and generator for unit tests focussing on test data.">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="808080">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="10,275,435,10">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="10,260,435,20">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

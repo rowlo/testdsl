@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: TestDSL grammer and domain model
+Bundle-Vendor: rowlo.de
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.rowlo.testgenerator.testdsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.registry,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common,
+ org.eclipse.e4.core.di;bundle-version="1.6.0",
+ org.eclipse.core.runtime;bundle-version="3.12.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.rowlo.testgenerator.testdsl,
+ de.rowlo.testgenerator.testdsl.generator,
+ de.rowlo.testgenerator.testdsl.generator.codegenerator,
+ de.rowlo.testgenerator.testdsl.parser.antlr,
+ de.rowlo.testgenerator.testdsl.parser.antlr.internal,
+ de.rowlo.testgenerator.testdsl.scoping,
+ de.rowlo.testgenerator.testdsl.serializer,
+ de.rowlo.testgenerator.testdsl.services,
+ de.rowlo.testgenerator.testdsl.testDSL,
+ de.rowlo.testgenerator.testdsl.testDSL.impl,
+ de.rowlo.testgenerator.testdsl.testDSL.util,
+ de.rowlo.testgenerator.testdsl.validation
+Import-Package: org.apache.log4j

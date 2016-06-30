@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="testDSL.codeGenerator.example.qt5"
+         name="Example Qt5 Pseudo Code Generator"
+         point="de.rowlo.testgenerator.testdsl.codeGenerator">
+      <codegenerator
+            class="de.rowlo.testgenerator.testdsl.codegenerator.ExampleQt5CodeGenerator"
+            name="Example Qt5 Pseudo Code Generator">
+      </codegenerator>
+   </extension>
+
+</plugin>

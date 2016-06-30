@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: TestDSL Editor
+Bundle-Vendor: rowlo.de
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.rowlo.testgenerator.testdsl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.rowlo.testgenerator.testdsl,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.rowlo.testgenerator.testdsl.ide.contentassist.antlr.internal,
+ de.rowlo.testgenerator.testdsl.ide.contentassist.antlr
+

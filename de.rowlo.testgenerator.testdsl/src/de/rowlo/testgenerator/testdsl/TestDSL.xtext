@@ -1,0 +1,63 @@
+grammar de.rowlo.testgenerator.testdsl.TestDSL with org.eclipse.xtext.common.Terminals
+
+generate testDSL "http://www.rowlo.de/testgenerator/testdsl/TestDSL"
+
+Domainmodel:
+    (elements+=AbstractElement)*;
+
+AbstractElement:
+    Test | Import | Type;
+
+Test:
+    'Test' name=QualifiedName '{' (testCases+=TestCase)* '}';
+
+QualifiedName:
+    ID ('.' ID)*;
+
+Import:
+    'import' importedNamespace=QualifiedNameWithWildcard;
+
+QualifiedNameWithWildcard:
+    QualifiedName '.*'?;
+
+Type:
+    DataType | Enum;
+
+DataType:
+    'datatype' name=ID;
+
+Enum:
+    'enum' name=ID '{'
+    literals+=Literal ('|' literals+=Literal)*
+    '}';
+
+Literal:
+    name=ID '=' value=STRING;
+
+Property:
+    DataTypeProperty | EnumProperty;
+
+DataTypeProperty:
+    type=[DataType|QualifiedName] name=ID '=' value=STRING
+    ('requires' requiredEnumLiteral=[Literal|QualifiedName])?;
+
+EnumProperty:
+    type=[Enum|QualifiedName] name=ID '=' value=[Literal|QualifiedName]
+    ('requires' requiredEnumLiteral=[Literal|QualifiedName])?;
+
+TestCase:
+    'TestCase' name=ID 'on' servers+=[Literal|QualifiedName] (',' servers+=[Literal|QualifiedName])*
+    '{'
+    input=Input
+    expectation=Expectation
+    '}';
+
+Input:
+    'tests' name='input' '{'
+    ('val' properties+=Property)*
+    '}';
+
+Expectation:
+    'verifies' name='output' '{'
+    ('val' properties+=Property)*
+    '}';

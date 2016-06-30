@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="testDSL.codeGenerator.example.java"
+         name="Example Java Pseudo Code Generator"
+         point="de.rowlo.testgenerator.testdsl.codeGenerator">
+      <codegenerator
+            class="de.rowlo.testgenerator.testdsl.codegenerator.ExampleJavaCodeGenerator"
+            name="Example Java Code Generator">
+      </codegenerator>
+   </extension>
+
+</plugin>

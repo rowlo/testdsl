@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="testDSL.codeGenerator.example.csharp"
+         name="Example C# Pseudo Code Generator"
+         point="de.rowlo.testgenerator.testdsl.codeGenerator">
+      <codegenerator
+            class="de.rowlo.testgenerator.testdsl.codegenerator.ExampleCsharpCodeGenerator"
+            name="Example C# Code Generator">
+      </codegenerator>
+   </extension>
+
+</plugin>
