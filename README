@@ -1,0 +1,6 @@
+This repository contains the sources to my "The Few Hours Shiny DSL Product Tutorial". That tutorial is available as a quiet comprehensive article: http://www.robertwloch.net/2016/08/the-few-hours-minutes-shiny-dsl-product-tutorial/
+
+Summary of that repository:
+Provides an example of a branded stand alone Eclipse RCP product featuring an Xtext based DSL for describing unit tests based on input values and expectation values. Furthermore, the product contains modular generators for generating pseudo source code of unit tests for C#, Java and Qt5.
+
+Further details about the product and how you can re create it are available in the above mentioned article.
